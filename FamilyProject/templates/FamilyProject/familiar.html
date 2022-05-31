@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class ="card mb-3 mt-3 mx-3 bg-info text-white" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ pariente.nombre}} {{pariente.apellido}}</h5>
+      <p class="card-text"><i>{{ pariente.descripcion}}</i> </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><b>Parentesco:</b> {{ pariente.parentesco }}</li>
+      <li class="list-group-item"><b>Edad:</b> {{ pariente.edad}} años</li>
+      <li class="list-group-item"><b>Fecha de nacimiento:</b> {{ pariente.fdn}}</li>
+    </ul>
+    <div class="card-body">
+      <a href="{% url 'inicio' %}" class="card-link">Volver al inicio</a>
+    </div>
+</div>
+
+{% endblock content %}
